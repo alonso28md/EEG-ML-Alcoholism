@@ -1,0 +1,149 @@
+# ─────────────────────────────────────────────────────────────────────────────
+#  .gitignore — EEG & Machine Learning · Alcoholism Predisposition
+#  Alonso Martín Díez · Universidad Europea de Madrid 2026
+# ─────────────────────────────────────────────────────────────────────────────
+
+
+# ─────────────────────────────────────────────
+#  LARGE DATA — never commit to git
+# ─────────────────────────────────────────────
+
+# Raw EEG CSVs (~9 GB, 11 000+ files) — regenerate with convert_eeg_to_csv.py
+data/raw/
+
+# Processed feature matrices and splits
+data/*.parquet
+data/X_train*.parquet
+data/X_test*.parquet
+data/y_train*.parquet
+data/y_test*.parquet
+
+# Cleaned EEG parquet (intermediate, ~35 MB)
+data/eeg_cleaned.parquet
+
+# Trained model binaries
+data/*.pkl
+
+# ─────────────────────────────────────────────
+#  PYTHON
+# ─────────────────────────────────────────────
+
+# Byte-compiled / optimised / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyd
+*.pyo
+
+# Distribution / packaging
+.Python
+build/
+dist/
+eggs/
+.eggs/
+*.egg-info/
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env/
+ENV/
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.pytest_cache/
+
+# Type checking
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pytype/
+
+# ─────────────────────────────────────────────
+#  JUPYTER NOTEBOOKS
+# ─────────────────────────────────────────────
+
+# Checkpoint files (auto-saved intermediate states)
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
+# nbconvert output (HTML, PDF, script exports)
+notebooks/*.html
+notebooks/*.pdf
+notebooks/*.py
+
+# ─────────────────────────────────────────────
+#  VS CODE
+# ─────────────────────────────────────────────
+
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# ─────────────────────────────────────────────
+#  WINDOWS
+# ─────────────────────────────────────────────
+
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# ─────────────────────────────────────────────
+#  MACOS  (in case repo is opened on Mac)
+# ─────────────────────────────────────────────
+
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# ─────────────────────────────────────────────
+#  GENERATED OUTPUTS  (reproducible from code)
+# ─────────────────────────────────────────────
+
+# Figures are reproducible — optionally track them
+# docs/*.png
+
+# ZIP exports
+*.zip
+
+# Temporary scripts used during development
+fix_*.py
+check_*.py
+set_nfiles.py
+dump_*.py
+inspect_*.py
+
+# ─────────────────────────────────────────────
+#  SECRETS & ENVIRONMENT
+# ─────────────────────────────────────────────
+
+.env
+.env.*
+*.pem
+*.key
+secrets.py
+config_local.py

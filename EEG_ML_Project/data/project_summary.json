@@ -1,0 +1,48 @@
+{
+  "project": "EEG + Machine Learning \u2014 Alcoholism Predisposition",
+  "author": "Alonso Mart\u00edn D\u00edez",
+  "institution": "Universidad Europea de Madrid",
+  "dataset": "UCI EEG Database (Begleiter, 1995)",
+  "n_models": 7,
+  "n_features": 46,
+  "best_model": "Decision Tree",
+  "best_accuracy": 0.72,
+  "best_roc_auc": 0.8654,
+  "model_results": {
+    "Decision Tree": {
+      "accuracy": 0.72,
+      "f1": 0.7191,
+      "roc_auc": 0.8654
+    },
+    "Logistic Regression": {
+      "accuracy": 0.68,
+      "f1": 0.6769,
+      "roc_auc": 0.8205
+    },
+    "XGBoost": {
+      "accuracy": 0.76,
+      "f1": 0.7577,
+      "roc_auc": 0.7885
+    },
+    "Random Forest": {
+      "accuracy": 0.72,
+      "f1": 0.72,
+      "roc_auc": 0.7821
+    },
+    "KNN": {
+      "accuracy": 0.56,
+      "f1": 0.5557,
+      "roc_auc": 0.75
+    },
+    "MLP Neural Net": {
+      "accuracy": 0.64,
+      "f1": 0.6329,
+      "roc_auc": 0.6987
+    },
+    "SVM (RBF)": {
+      "accuracy": 0.64,
+      "f1": 0.6329,
+      "roc_auc": 0.6346
+    }
+  }
+}
